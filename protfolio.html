@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>HackProof Academy | Personal Cybersecurity & Network Engineering Defense Center</title>
+
+    <meta name="description" content="Professional portfolio of a Cybersecurity Analyst, Network Security Engineer, and NOC/SOC Specialist focusing on ISP infrastructure, defensive security, incident response, and AI automation.">
+    <meta name="author" content="HackProof Academy">
+    <meta name="keywords" content="Cybersecurity Analyst Bangladesh, Network Security Engineer, NOC Engineer, SOC Analyst, ISP Security, MikroTik, Blue Team Security, AI Prompt Engineer">
+    <meta name="theme-color" content="#060913">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HackProof Academy | Cybersecurity & Network Defense">
+    <meta property="og:description" content="Enterprise Cyber Defense Command Center & ISP Network Engineering Portfolio.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HackProof Academy | Network Security Architecture">
+    <meta name="twitter:description" content="Cybersecurity Analyst, SOC/NOC Engineer & AI Security Automation Professional.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "HackProof Academy Lead Architect",
+      "jobTitle": "Cybersecurity Analyst & Network Security Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "HackProof Academy Security Operations"
+      },
+      "knowsAbout": ["Network Security", "ISP Routing", "SOC Log Analysis", "Threat Hunting", "BGP", "MikroTik", "AI Automation"],
+      "alumniOf": "B.Sc. in Computer Science & Engineering"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#060913',
+                            card: 'rgba(12, 19, 36, 0.75)',
+                            border: 'rgba(0, 210, 255, 0.12)',
+                            cyan: '#00d2ff',
+                            orange: '#f27127',
+                            green: '#2ed573',
+                            purple: '#9b51e0',
+                            red: '#ff4757',
+                            muted: '#8a99ad'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <style>
+        :root {
+            --bg-cyber: #060913;
+            --cyan-glow: rgba(0, 210, 255, 0.4);
+            --orange-glow: rgba(242, 113, 39, 0.4);
+            --green-glow: rgba(46, 213, 115, 0.4);
+        }
+
+        body {
+            background-color: var(--bg-cyber);
+            color: #f1f5f9;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Cyber Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #060913; }
+        ::-webkit-scrollbar-thumb { background: #0c182e; border: 1px solid rgba(0, 210, 255, 0.2); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00d2ff; }
+
+        /* Custom Desktop Cursor Indicator */
+        #custom-cursor {
+            pointer-events: none;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 99999;
+            width: 20px; height: 20px;
+            border: 2px solid #00d2ff;
+            border-radius: 50%;
+            transition: transform 0.1s ease, background-color 0.2s ease;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 12px var(--cyan-glow);
+        }
+        #custom-cursor-dot {
+            pointer-events: none;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 99999;
+            width: 4px; height: 4px;
+            background-color: #f27127;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Glassmorphism Surface Token */
+        .glass-card {
+            background: rgba(12, 19, 36, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 210, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 210, 255, 0.4);
+            box-shadow: 0 10px 40px rgba(0, 210, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        /* Cyber Background Grid Grid Pattern */
+        .bg-cyber-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* Scanline Overlay Effect */
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 9998;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 3px, 6px 100%;
+            opacity: 0.6;
+        }
+
+        /* Pulse Nodes & Glowing Utility */
+        .glow-cyan { box-shadow: 0 0 15px rgba(0, 210, 255, 0.4); }
+        .glow-orange { box-shadow: 0 0 15px rgba(242, 113, 39, 0.4); }
+        .text-glow-cyan { text-shadow: 0 0 8px rgba(0, 210, 255, 0.6); }
+
+        /* Terminal Typing Cursor */
+        .typing-cursor::after {
+            content: '█';
+            animation: blink 1s infinite;
+            color: #00d2ff;
+            margin-left: 2px;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* Reduced Motion Utility */
+        @media (prefers-reduced-motion: reduce) {
+            *, ::before, ::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            #custom-cursor, #custom-cursor-dot { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-cyber-bg bg-cyber-grid min-h-screen flex flex-col justify-between selection:bg-cyber-cyan selection:text-black">
+
+    <div id="custom-cursor" class="hidden md:block"></div>
+    <div id="custom-cursor-dot" class="hidden md:block"></div>
+
+    <div class="scanlines"></div>
+
+    <div id="preloader" class="fixed inset-0 bg-[#040711] z-[99999] flex flex-col items-center justify-center p-4 font-mono">
+        <div class="w-full max-w-xl glass-card p-6 rounded-lg border-cyber-cyan/30 text-xs sm:text-sm space-y-3">
+            <div class="flex items-center justify-between border-b border-cyber-border pb-2 text-cyber-muted">
+                <span><i class="fa-solid fa-terminal text-cyber-cyan me-2"></i>BOOT_SEQUENCE_V4.8.2</span>
+                <span id="boot-time">SYS_OK</span>
+            </div>
+            <div id="boot-terminal-text" class="text-cyber-cyan space-y-1.5 min-h-[140px]">
+                </div>
+            <div class="w-full bg-slate-800/80 h-1.5 rounded-full overflow-hidden">
+                <div id="boot-progress" class="bg-gradient-to-r from-cyber-cyan to-cyber-orange h-full w-0 transition-all duration-300"></div>
+            </div>
+            <div class="text-center pt-2">
+                <h1 class="text-xl sm:text-2xl font-extrabold tracking-widest text-white">HACKPROOF <span class="text-cyber-orange">ACADEMY</span></h1>
+                <p class="text-[10px] text-cyber-muted tracking-widest uppercase mt-1">Cybersecurity • Network Security • AI Workflows</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyber-cyan via-cyber-orange to-cyber-green z-[10000] w-0 transition-all duration-150"></div>
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-card !border-x-0 !border-t-0 !rounded-none">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-cyber-card border border-cyber-cyan/40 flex items-center justify-center text-cyber-cyan group-hover:shadow-[0_0_15px_rgba(0,210,255,0.5)] transition-all">
+                    <i class="fa-solid fa-shield-halved text-lg"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-base sm:text-lg tracking-wider text-white block leading-tight font-mono">HACKPROOF</span>
+                    <span class="text-[10px] font-bold text-cyber-orange tracking-widest block uppercase font-mono">Defense Engine</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-6 text-xs font-mono tracking-wide">
+                <a href="#hero" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/HOME</a>
+                <a href="#about" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/ABOUT</a>
+                <a href="#expertise" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/EXPERTISE</a>
+                <a href="#network" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/NETWORK_NOC</a>
+                <a href="#dashboard" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/COMMAND_SOC</a>
+                <a href="#projects" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/LABS</a>
+                <a href="#ai" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/AI_WORKFLOWS</a>
+                <a href="#contact" class="text-slate-300 hover:text-cyber-cyan transition-colors py-1">/CONTACT</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#dashboard" class="px-4 py-2 rounded border border-cyber-cyan/30 text-cyber-cyan text-xs font-mono font-semibold hover:bg-cyber-cyan/10 transition-all glow-cyan">
+                    <i class="fa-solid fa-chart-line me-1.5"></i>SOC Monitor
+                </a>
+                <a href="#contact" class="px-4 py-2 rounded bg-gradient-to-r from-cyber-orange to-red-600 text-white text-xs font-mono font-bold hover:shadow-[0_0_20px_rgba(242,113,39,0.5)] transition-all">
+                    <i class="fa-solid fa-headset me-1.5"></i>Engage Response
+                </a>
+            </div>
+
+            <button id="mobile-toggle" class="lg:hidden text-2xl text-cyber-cyan p-2 focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-cyber-bg/95 border-b border-cyber-border px-6 py-6 space-y-4 font-mono text-xs">
+            <a href="#hero" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/HOME</a>
+            <a href="#about" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/ABOUT</a>
+            <a href="#expertise" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/EXPERTISE</a>
+            <a href="#network" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/NETWORK_NOC</a>
+            <a href="#dashboard" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/COMMAND_SOC</a>
+            <a href="#projects" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/LABS</a>
+            <a href="#ai" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/AI_WORKFLOWS</a>
+            <a href="#contact" class="mobile-nav-link block text-slate-300 hover:text-cyber-cyan">/CONTACT</a>
+            <div class="pt-4 border-t border-cyber-border flex flex-col gap-2">
+                <a href="#dashboard" class="mobile-nav-link text-center py-2.5 rounded border border-cyber-cyan/30 text-cyber-cyan font-bold">SOC Monitor Live</a>
+                <a href="#contact" class="mobile-nav-link text-center py-2.5 rounded bg-cyber-orange text-white font-bold">Engage Security Desk</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-20">
+
+        <section id="hero" class="min-h-[90vh] flex items-center relative py-12 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border-cyber-cyan/30 text-cyber-cyan text-xs font-mono">
+                            <span class="w-2 h-2 rounded-full bg-cyber-green animate-ping"></span>
+                            <span>DEFENSIVE SECURITY OPERATIONS ACTIVE</span>
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            SECURING NETWORKS.<br>
+                            ANALYZING THREATS.<br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-cyan via-cyber-orange to-cyber-green">ENGINEERING DIGITAL DEFENSE.</span>
+                        </h1>
+
+                        <p class="text-sm sm:text-base text-cyber-muted max-w-2xl mx-auto lg:mx-0 leading-relaxed font-sans">
+                            Cybersecurity Analyst & Network Security Engineer specializing in ISP infrastructure, NOC/SOC monitoring, defensive security, incident analysis, and AI-assisted security workflows.
+                        </p>
+
+                        <div class="font-mono text-xs sm:text-sm text-cyber-cyan bg-cyber-card/60 p-3 rounded border border-cyber-border inline-block">
+                            <span class="text-cyber-muted">&gt; CURRENT_ROLE: </span>
+                            <span id="role-typewriter" class="typing-cursor font-bold text-white"></span>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2 font-mono text-xs">
+                            <a href="#expertise" class="w-full sm:w-auto px-8 py-3.5 rounded bg-cyber-cyan text-black font-extrabold hover:shadow-[0_0_25px_rgba(0,210,255,0.6)] transition-all">
+                                <i class="fa-solid fa-shield me-2"></i>EXPLORE EXPERTISE
+                            </a>
+                            <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded glass-card text-white font-bold hover:border-cyber-cyan transition-all">
+                                <i class="fa-solid fa-flask me-2"></i>VIEW RESEARCH LABS
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative" data-aos="zoom-in">
+                        <div class="glass-card p-6 rounded-2xl border-cyber-cyan/30 relative overflow-hidden">
+                            <div class="text-xs font-mono text-cyber-muted mb-4 flex items-center justify-between border-b border-cyber-border pb-2">
+                                <span><i class="fa-solid fa-network-wired text-cyber-cyan me-2"></i>ISP TOPOLOGY AGGREGATION</span>
+                                <span class="text-cyber-green font-bold">100 Gbps CORE</span>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-3 text-center text-xs font-mono py-4">
+                                <div class="p-3 glass-card rounded border-cyber-cyan/30 hover:border-cyber-cyan cursor-pointer" onclick="openNodeModal('IIG Router', 'Upstream Gateway Peer 01 - BGP Full Table Status OK')">
+                                    <i class="fa-solid fa-globe text-2xl text-cyber-cyan mb-1"></i>
+                                    <div class="font-bold text-white">IIG PEER</div>
+                                    <span class="text-[9px] text-cyber-green">ONLINE</span>
+                                </div>
+                                <div class="p-3 glass-card rounded border-cyber-orange/30 hover:border-cyber-orange cursor-pointer" onclick="openNodeModal('Core Firewall', 'Enterprise Edge UTM - Active IPS Rules: 14,200')">
+                                    <i class="fa-solid fa-shield-virus text-2xl text-cyber-orange mb-1"></i>
+                                    <div class="font-bold text-white">FIREWALL</div>
+                                    <span class="text-[9px] text-cyber-green">FILTERING</span>
+                                </div>
+                                <div class="p-3 glass-card rounded border-cyber-green/30 hover:border-cyber-green cursor-pointer" onclick="openNodeModal('SIEM Engine', 'Splunk Log Streamer - Ingestion Rate: 4.2k EPS')">
+                                    <i class="fa-solid fa-server text-2xl text-cyber-green mb-1"></i>
+                                    <div class="font-bold text-white">SIEM LOGS</div>
+                                    <span class="text-[9px] text-cyber-green">ANALYZING</span>
+                                </div>
+                                <div class="p-3 glass-card rounded border-cyber-cyan/30 hover:border-cyber-cyan cursor-pointer" onclick="openNodeModal('MikroTik Core CCR', 'BGP Route Reflector - CPU Load: 12%')">
+                                    <i class="fa-solid fa-microchip text-2xl text-cyber-cyan mb-1"></i>
+                                    <div class="font-bold text-white">CORE CCR</div>
+                                    <span class="text-[9px] text-cyber-green">HEALTHY</span>
+                                </div>
+                                <div class="p-3 glass-card rounded border-purple-500/30 hover:border-purple-500 cursor-pointer" onclick="openNodeModal('GPON OLT Terminal', 'VSOL/BDCOM OLT Stack - Connected ONUs: 2,480 Active')">
+                                    <i class="fa-solid fa-box-archive text-2xl text-purple-400 mb-1"></i>
+                                    <div class="font-bold text-white">OLT STACK</div>
+                                    <span class="text-[9px] text-cyber-green">SYNCED</span>
+                                </div>
+                                <div class="p-3 glass-card rounded border-cyber-cyan/30 hover:border-cyber-cyan cursor-pointer" onclick="openNodeModal('SOC Workstation', 'Blue Team Monitoring Terminal Alpha - Active')">
+                                    <i class="fa-solid fa-desktop text-2xl text-cyber-cyan mb-1"></i>
+                                    <div class="font-bold text-white">SOC DESK</div>
+                                    <span class="text-[9px] text-cyber-green">MONITORING</span>
+                                </div>
+                            </div>
+
+                            <div class="text-[10px] font-mono text-cyber-muted text-center pt-2 border-t border-cyber-border">
+                                <i class="fa-solid fa-circle-info text-cyber-cyan me-1"></i>Click any network component for node status
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 01. PROFESSIONAL PROFILE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">WHO I AM</h2>
+                    <div class="w-16 h-1 bg-gradient-to-r from-cyber-cyan to-cyber-orange mx-auto rounded"></div>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-5" data-aos="fade-right">
+                        <div class="glass-card p-8 rounded-2xl relative space-y-6 text-center border-cyber-cyan/30">
+                            <div class="w-32 h-32 mx-auto rounded-full p-1 bg-gradient-to-tr from-cyber-cyan to-cyber-orange glow-cyan">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Professional Profile" class="w-full h-full object-cover rounded-full">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white font-mono">HackProof Academy Lead</h3>
+                                <p class="text-xs font-mono text-cyber-orange mt-1">B.Sc. Computer Science & Engineering</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 text-left font-mono text-xs border-t border-cyber-border pt-4">
+                                <div><span class="text-cyber-muted block">Focus:</span> <strong class="text-white">Defensive Security</strong></div>
+                                <div><span class="text-cyber-muted block">Infrastructure:</span> <strong class="text-white">ISP / NOC / SOC</strong></div>
+                                <div><span class="text-cyber-muted block">Routing:</span> <strong class="text-white">MikroTik / BGP / OSPF</strong></div>
+                                <div><span class="text-cyber-muted block">AI Workflows:</span> <strong class="text-white">Prompt Automation</strong></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-6 text-slate-300 text-sm leading-relaxed" data-aos="fade-left">
+                        <p>
+                            I am a cybersecurity analyst and network security engineer with practical expertise in ISP routing, NOC/SOC operations, infrastructure monitoring, and defensive security. Possessing a solid academic foundation with a <strong class="text-white">B.Sc. in Computer Science & Engineering</strong>, I specialize in engineering resilient networks and analyzing threat patterns.
+                        </p>
+                        <p>
+                            My background includes handling live ISP network environments—configuring MikroTik CCR routers, GPON OLTs, VLAN segmentation, and BGP/OSPF peering, alongside deploying proactive SIEM monitoring, threat detection rules, and incident response workflows.
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-4 font-mono text-xs pt-2">
+                            <div class="p-4 glass-card rounded border-l-4 border-l-cyber-cyan">
+                                <i class="fa-solid fa-graduation-cap text-cyber-cyan text-lg mb-2"></i>
+                                <h4 class="font-bold text-white">B.Sc. CSE Graduate</h4>
+                                <p class="text-cyber-muted text-[11px] mt-1">Core specialization in Computer Networks, System Architecture & Cyber Security.</p>
+                            </div>
+                            <div class="p-4 glass-card rounded border-l-4 border-l-cyber-orange">
+                                <i class="fa-solid fa-robot text-cyber-orange text-lg mb-2"></i>
+                                <h4 class="font-bold text-white">AI Security Automation</h4>
+                                <p class="text-cyber-muted text-[11px] mt-1">Integrating AI Prompt Engineering to automate log analysis and incident documentation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="py-20 bg-navy-950/50 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 02. DEFENSIVE DOMAINS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">CYBERSECURITY EXPERTISE</h2>
+                    <p class="text-xs sm:text-sm text-cyber-muted">Legitimate defensive security, incident triage, log analysis, and hardening methodologies.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('Security Monitoring', 'Continuous surveillance of log streams, network flows, and endpoints using SIEM tools like Splunk and Elastic Stack to identify anomalies.')" data-aos="fade-up">
+                        <i class="fa-solid fa-desktop text-2xl text-cyber-cyan"></i>
+                        <h3 class="text-base font-bold text-white font-mono">Security Monitoring</h3>
+                        <p class="text-xs text-cyber-muted">Real-time surveillance of network traffic and log aggregation pipelines.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Advanced</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('Threat Detection & Hunting', 'Proactive identification of adversary tactics, techniques, and procedures (TTPs) using MITRE ATT&CK frameworks and threat intelligence feeds.')" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-magnifying-glass-chart text-2xl text-cyber-orange"></i>
+                        <h3 class="text-base font-bold text-white font-mono">Threat Detection</h3>
+                        <p class="text-xs text-cyber-muted">Behavioral analysis and IOC tracking mapped against MITRE ATT&CK.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Advanced</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('SIEM & Log Analysis', 'Constructing custom parsers, dashboards, and correlation rules in Splunk/Wazuh to analyze authentication logs, firewall drops, and DNS traffic.')" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-chart-line text-2xl text-purple-400"></i>
+                        <h3 class="text-base font-bold text-white font-mono">SIEM & Log Analysis</h3>
+                        <p class="text-xs text-cyber-muted">Log ingestion, correlation rule writing, and SIEM dashboard design.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Intermediate-Advanced</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('Incident Response Workflow', 'Structured triage, containment, eradication, and post-incident investigation following NIST/ISO guidelines.')" data-aos="fade-up">
+                        <i class="fa-solid fa-shield-halved text-2xl text-cyber-red"></i>
+                        <h3 class="text-base font-bold text-white font-mono">Incident Analysis</h3>
+                        <p class="text-xs text-cyber-muted">Structured triage, impact isolation, and forensic timeline reconstruction.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Intermediate</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('Vulnerability Assessment', 'Automated and manual vulnerability auditing using OpenVAS and Nmap to identify security patches and configuration flaws.')" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fa-solid fa-bug-slash text-2xl text-cyber-green"></i>
+                        <h3 class="text-base font-bold text-white font-mono">Vulnerability Assessment</h3>
+                        <p class="text-xs text-cyber-muted">Systematic scanning, patch auditing, and risk prioritization workflows.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Intermediate</span>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-3 cursor-pointer" onclick="openModal('Network Hardening & Firewalling', 'Hardening MikroTik CCR, Cisco ASA, and Linux iptables/nftables to block unauthorized access and prevent DDoS attacks.')" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fa-solid fa-lock text-2xl text-cyber-cyan"></i>
+                        <h3 class="text-base font-bold text-white font-mono">Security Hardening</h3>
+                        <p class="text-xs text-cyber-muted">Applying CIS Benchmarks, disabling legacy services, and tightening ACLs.</p>
+                        <span class="text-[10px] font-mono text-cyber-green block">Skill Indicator: Advanced</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="network" class="py-20 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 03. INFRASTRUCTURE & ISP ARCHITECTURE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">NETWORK ENGINEERING</h2>
+                    <p class="text-xs sm:text-sm text-cyber-muted">Visual representation of an ISP fiber optical distribution pipeline.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl space-y-8 font-mono" data-aos="zoom-in">
+                    <h3 class="text-sm font-bold text-cyber-cyan border-b border-cyber-border pb-3 flex items-center justify-between">
+                        <span><i class="fa-solid fa-diagram-project me-2"></i>INTERNET SERVICE PROVIDER END-TO-END FLOW</span>
+                        <span class="text-[10px] text-cyber-green">ACTIVE TRUNK</span>
+                    </h3>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 text-center text-xs">
+                        <div class="p-3 glass-card rounded border-cyber-cyan/40 hover:border-cyber-cyan transition-all cursor-pointer" onclick="openNodeModal('INTERNET BACKBONE', 'Global Transit Links - Upstream Tier-1 Peering Exchanges')">
+                            <i class="fa-solid fa-cloud text-xl text-cyber-cyan mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">INTERNET</div>
+                            <span class="text-[9px] text-cyber-muted">Global Transit</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-cyan/40 hover:border-cyber-cyan transition-all cursor-pointer" onclick="openNodeModal('IIG GATEWAY', 'International Internet Gateway - BGP Full Routing Tables')">
+                            <i class="fa-solid fa-server text-xl text-cyber-cyan mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">IIG</div>
+                            <span class="text-[9px] text-cyber-muted">Upstream Link</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-orange/40 hover:border-cyber-orange transition-all cursor-pointer" onclick="openNodeModal('EDGE ROUTER', 'MikroTik CCR2216 / Cisco ASR - Core Border Peering')">
+                            <i class="fa-solid fa-network-wired text-xl text-cyber-orange mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">EDGE ROUTER</div>
+                            <span class="text-[9px] text-cyber-muted">BGP / OSPF</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-red/40 hover:border-cyber-red transition-all cursor-pointer" onclick="openNodeModal('UTM FIREWALL', 'Palo Alto / FortiGate - Deep Packet Inspection & Threat Prevention')">
+                            <i class="fa-solid fa-shield-cat text-xl text-cyber-red mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">FIREWALL</div>
+                            <span class="text-[9px] text-cyber-muted">IPS Filter</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-cyan/40 hover:border-cyber-cyan transition-all cursor-pointer" onclick="openNodeModal('DISTRIBUTION SWITCH', 'L3 Managed Switch Layer - VLAN Trunking & LACP Aggregation')">
+                            <i class="fa-solid fa-sitemap text-xl text-cyber-cyan mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">DISTRIBUTION</div>
+                            <span class="text-[9px] text-cyber-muted">VLAN / LACP</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-purple-400/40 hover:border-purple-400 transition-all cursor-pointer" onclick="openNodeModal('GPON / EPON OLT', 'VSOL / BDCOM OLT Chassis - Optical Line Terminal Distribution')">
+                            <i class="fa-solid fa-box text-xl text-purple-400 mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">OLT TERMINAL</div>
+                            <span class="text-[9px] text-cyber-muted">Optical Trunk</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-green/40 hover:border-cyber-green transition-all cursor-pointer" onclick="openNodeModal('CUSTOMER ONU', 'Optical Network Unit Terminal - Client Fiber Drop Terminus')">
+                            <i class="fa-solid fa-hard-drive text-xl text-cyber-green mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">ONU DEVICE</div>
+                            <span class="text-[9px] text-cyber-muted">Optical Drop</span>
+                        </div>
+                        <div class="p-3 glass-card rounded border-cyber-cyan/40 hover:border-cyber-cyan transition-all cursor-pointer" onclick="openNodeModal('SUBSCRIBER ROUTER', 'PPPoE / Static IP Terminal - WiFi Gateway Router')">
+                            <i class="fa-solid fa-wifi text-xl text-cyber-cyan mb-1"></i>
+                            <div class="font-bold text-white text-[11px]">CUSTOMER</div>
+                            <span class="text-[9px] text-cyber-muted">PPPoE / LAN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-2 font-mono text-xs">
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-cyber-cyan">MikroTik CCR</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">Cisco IOS</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">BDCOM OLT</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">VSOL GPON</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-cyber-orange">BGP Peering</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">OSPF Routing</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">VLAN Trunking</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-white">PPPoE / RADIUS</span>
+                    <span class="px-3 py-1.5 glass-card rounded border-cyber-cyan/30 text-cyber-green">WireGuard VPN</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard" class="py-20 bg-navy-950/50 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-orange tracking-widest uppercase">// 04. SIMULATED MONITORING SUITE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">NOC & SOC COMMAND CENTER</h2>
+                    <p class="text-xs sm:text-sm text-cyber-muted">Simulated telemetry dashboard demonstrating ISP uptime and threat events monitoring.</p>
+                </div>
+
+                <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-6 font-mono border-cyber-cyan/30" data-aos="fade-up">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-cyber-border pb-4 text-xs">
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-cyber-green animate-pulse"></span>
+                            <span class="font-bold text-white text-sm">COMMAND_CENTER_LIVE</span>
+                        </div>
+                        <div class="flex gap-4 text-cyber-muted text-[11px]">
+                            <span>UPTIME: <strong class="text-white">99.98%</strong></span>
+                            <span>LATENCY: <strong class="text-cyber-green">14 ms</strong></span>
+                            <span>ACTIVE NODES: <strong class="text-cyber-cyan">2,480</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-navy-900/80 p-4 rounded border border-cyber-border space-y-2">
+                            <div class="text-[11px] text-cyber-muted flex justify-between">
+                                <span>CORE ROUTER (MikroTik)</span>
+                                <span class="text-cyber-green font-bold">ONLINE</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-white">3.4 Gbps / 10 Gbps</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded overflow-hidden">
+                                <div class="bg-cyber-cyan h-full w-[34%]"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900/80 p-4 rounded border border-cyber-border space-y-2">
+                            <div class="text-[11px] text-cyber-muted flex justify-between">
+                                <span>UTM FIREWALL DROP RATE</span>
+                                <span class="text-cyber-orange font-bold">ACTIVE FILTER</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-cyber-orange">142 Drops/sec</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded overflow-hidden">
+                                <div class="bg-cyber-orange h-full w-[62%]"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900/80 p-4 rounded border border-cyber-border space-y-2">
+                            <div class="text-[11px] text-cyber-muted flex justify-between">
+                                <span>SIEM INGESTION (Wazuh)</span>
+                                <span class="text-cyber-green font-bold">PARSING</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-white">4,200 EPS</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded overflow-hidden">
+                                <div class="bg-purple-400 h-full w-[48%]"></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900/80 p-4 rounded border border-cyber-border space-y-2">
+                            <div class="text-[11px] text-cyber-muted flex justify-between">
+                                <span>OLT OPTICAL PON STACK</span>
+                                <span class="text-cyber-green font-bold">OPTICAL OK</span>
+                            </div>
+                            <div class="text-xl font-extrabold text-cyber-green">-19.4 dBm Avg</div>
+                            <div class="w-full bg-slate-800 h-1.5 rounded overflow-hidden">
+                                <div class="bg-cyber-green h-full w-[85%]"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-900/90 p-4 rounded border border-cyber-border space-y-2 text-xs">
+                        <div class="text-[11px] font-bold text-cyber-cyan flex justify-between border-b border-slate-800 pb-2">
+                            <span><i class="fa-solid fa-list-check me-2"></i>SIMULATED SIEM SECURITY EVENT LOGS</span>
+                            <span>REALTIME FEED</span>
+                        </div>
+                        <div class="space-y-1 text-[11px] font-mono" id="simulated-logs-container">
+                            <div class="text-slate-300"><span class="text-cyber-muted">[14:32:01]</span> <span class="text-cyber-green">[INFO]</span> BGP Session Established with Upstream Peer 103.x.x.1</div>
+                            <div class="text-slate-300"><span class="text-cyber-muted">[14:32:15]</span> <span class="text-cyber-orange">[WARN]</span> SSH Brute force attempt blocked on Port 22 - IP 185.x.x.42</div>
+                            <div class="text-slate-300"><span class="text-cyber-muted">[14:32:28]</span> <span class="text-cyber-cyan">[LOG]</span> OLT PON Port 1/3 - ONU 42 Power Signal Verified OK</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="py-20 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 05. TOOLKIT & PLATFORMS</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">TOOLING ECOSYSTEM</h2>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center font-mono text-xs">
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in"><i class="fa-solid fa-microchip text-2xl text-cyber-cyan"></i><div>MikroTik</div></div>
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in" data-aos-delay="50"><i class="fa-solid fa-network-wired text-2xl text-cyber-orange"></i><div>Cisco IOS</div></div>
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in" data-aos-delay="100"><i class="fa-brands fa-linux text-2xl text-cyber-green"></i><div>Linux/Bash</div></div>
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in" data-aos-delay="150"><i class="fa-solid fa-fish text-2xl text-cyber-cyan"></i><div>Wireshark</div></div>
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in" data-aos-delay="200"><i class="fa-solid fa-chart-pie text-2xl text-purple-400"></i><div>Splunk</div></div>
+                    <div class="p-4 glass-card rounded border-cyber-border space-y-2" data-aos="zoom-in" data-aos-delay="250"><i class="fa-brands fa-python text-2xl text-amber-400"></i><div>Python</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai" class="py-20 bg-navy-950/50 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
+                        <span class="text-xs font-mono font-bold text-purple-400 tracking-widest uppercase">// 06. AI SECURITY INTEGRATION</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">AI-ASSISTED SECURITY & AUTOMATION</h2>
+                        <p class="text-sm text-cyber-muted leading-relaxed">
+                            Leveraging structured Prompt Engineering and LLM workflows to automate security log summaries, draft incident report templates, generate regex rules for log parsers, and document complex network topologies.
+                        </p>
+                        <div class="space-y-3 font-mono text-xs text-slate-300">
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i><span>Automated SIEM Log Parsing Prompt Workflows</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i><span>Incident Report Drafting via Structured Prompts</span></div>
+                            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-purple-400"></i><span>MikroTik & Cisco Config Generation Assistance</span></div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6" data-aos="fade-left">
+                        <div class="glass-card p-6 rounded-2xl border-purple-500/30 space-y-4 font-mono text-xs">
+                            <div class="flex justify-between items-center text-cyber-muted border-b border-slate-800 pb-2">
+                                <span><i class="fa-solid fa-brain text-purple-400 me-2"></i>AI_PROMPT_PIPELINE.PY</span>
+                                <span class="text-purple-400">EXECUTING</span>
+                            </div>
+                            <div class="bg-navy-900 p-4 rounded text-slate-300 space-y-2">
+                                <span class="text-cyber-muted"># Input Structured Incident Payload</span><br>
+                                <span class="text-cyber-cyan">prompt_context</span> = "Analyze Firewall Drop Spikes from IP 185.x.x.42 and generate Incident Triage Summary."<br>
+                                <span class="text-purple-400">ai_output</span> = "Summary: Potential SSH Brute-Force Pattern identified. Recommendation: Enforce Ban via MikroTik Address List."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 border-t border-cyber-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-2" data-aos="fade-up">
+                    <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 07. RESEARCH & LAB EXERCISES</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">PROJECTS & CASE STUDIES</h2>
+                    <p class="text-xs sm:text-sm text-cyber-muted">All research conducted in isolated virtual laboratory environments.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col justify-between" data-aos="fade-up">
+                        <div class="space-y-3">
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/20">LAB ENVIRONMENT</span>
+                            <h3 class="text-lg font-bold text-white font-mono">Multi-Vendor ISP Virtual Lab</h3>
+                            <p class="text-xs text-cyber-muted leading-relaxed">Emulated ISP backbone using GNS3 featuring MikroTik CCRs, Cisco ASRs, OSPF routing, and BGP peering.</p>
+                        </div>
+                        <button onclick="openModal('Multi-Vendor ISP Virtual Lab', 'Constructed a full virtual ISP topology using GNS3. Configured OSPF as internal gateway protocol and established IBGP/EBGP peering sessions. Resulted in seamless failover testing.')" class="btn-emerald-shimmer py-2.5 rounded text-xs font-mono font-bold text-white w-full">View Case Study</button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                        <div class="space-y-3">
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">SOC MONITORING</span>
+                            <h3 class="text-lg font-bold text-white font-mono">Wazuh SIEM Threat Detection Lab</h3>
+                            <p class="text-xs text-cyber-muted leading-relaxed">Deployed Wazuh SIEM agent stack on Linux targets to correlate authentication failures and generate alert triggers.</p>
+                        </div>
+                        <button onclick="openModal('Wazuh SIEM Threat Detection Lab', 'Ingested syslogs from virtual web servers into Wazuh SIEM. Configured custom XML detection rules for brute-force attacks and web scanning alerts.')" class="btn-emerald-shimmer py-2.5 rounded text-xs font-mono font-bold text-white w-full">View Case Study</button>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl space-y-4 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                        <div class="space-y-3">
+                            <span class="text-[10px] font-mono px-2 py-1 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">AI AUTOMATION</span>
+                            <h3 class="text-lg font-bold text-white font-mono">AI-Assisted Incident Log Summarizer</h3>
+                            <p class="text-xs text-cyber-muted leading-relaxed">Python script utilizing LLM APIs to parse raw Firewall drop logs and draft human-readable incident notes.</p>
+                        </div>
+                        <button onclick="openModal('AI-Assisted Incident Log Summarizer', 'Automated raw syslog transformation into structured markdown summaries using Python and OpenAI/Gemini API prompts, reducing triage reporting time.')" class="btn-emerald-shimmer py-2.5 rounded text-xs font-mono font-bold text-white w-full">View Case Study</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-navy-950/80 border-t border-cyber-border text-center">
+            <div class="max-w-4xl mx-auto px-4 font-mono text-xs text-cyber-muted space-y-2">
+                <div class="text-cyber-orange font-bold"><i class="fa-solid fa-triangle-exclamation me-2"></i>RESPONSIBLE DISCLOSURE & RESEARCH ETHICS</div>
+                <p>All security research and demonstrations presented here are conducted strictly for authorized, defensive, and educational purposes within isolated laboratory environments.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 border-t border-cyber-border relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card p-8 sm:p-12 rounded-3xl space-y-8" data-aos="fade-up">
+                    <div class="text-center space-y-2">
+                        <span class="text-xs font-mono font-bold text-cyber-cyan tracking-widest uppercase">// 08. SECURE COMMUNICATIONS</span>
+                        <h2 class="text-3xl font-extrabold text-white">ENGAGE SECURITY DESK</h2>
+                        <p class="text-xs sm:text-sm text-cyber-muted">Direct dispatch line for security inquiries, network consultations, or technical collaboration.</p>
+                    </div>
+
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4 font-mono text-xs">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-slate-300 mb-1">FULL NAME *</label>
+                                <input type="text" id="contact-name" required class="w-full px-4 py-3 bg-navy-900 border border-cyber-border rounded text-white focus:outline-none focus:border-cyber-cyan">
+                            </div>
+                            <div>
+                                <label class="block text-slate-300 mb-1">EMAIL ADDRESS *</label>
+                                <input type="email" id="contact-email" required class="w-full px-4 py-3 bg-navy-900 border border-cyber-border rounded text-white focus:outline-none focus:border-cyber-cyan">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 mb-1">SUBJECT *</label>
+                            <input type="text" id="contact-subject" required class="w-full px-4 py-3 bg-navy-900 border border-cyber-border rounded text-white focus:outline-none focus:border-cyber-cyan">
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 mb-1">TRANSMISSION MESSAGE *</label>
+                            <textarea id="contact-message" rows="4" required class="w-full px-4 py-3 bg-navy-900 border border-cyber-border rounded text-white focus:outline-none focus:border-cyber-cyan"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded bg-gradient-to-r from-cyber-orange to-red-600 text-white font-extrabold tracking-wider hover:shadow-[0_0_20px_rgba(242,113,39,0.5)] transition-all">
+                            TRANSMIT MESSAGE STREAM
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="info-modal" class="fixed inset-0 z-[10000] hidden bg-navy-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-lg p-6 sm:p-8 rounded-2xl relative space-y-4 font-mono">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-cyber-muted hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="modal-title" class="text-lg font-bold text-cyber-cyan"></h3>
+            <div class="border-t border-cyber-border pt-3">
+                <p id="modal-body" class="text-xs text-slate-300 leading-relaxed font-sans"></p>
+            </div>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded bg-cyber-cyan text-black font-bold text-xs">ACKNOWLEDGE & CLOSE</button>
+        </div>
+    </div>
+
+    <footer class="bg-navy-950 border-t border-cyber-border py-8 text-xs font-mono text-cyber-muted">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3">
+            <p>&copy; 2026 HackProof Academy. All Security Research Conducted Defensively.</p>
+            <p class="text-[10px] text-slate-500">Built with modern web standards, GSAP animations, and defensive security protocols.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // 1. PRELOADER & TERMINAL BOOT SEQUENCE
+        const bootTextLogs = [
+            "INITIALIZING SECURE ENVIRONMENT...",
+            "LOADING NETWORK MODULES [MikroTik / Cisco]...",
+            "CONNECTING SIEM THREAT ENGINE...",
+            "STARTING NOC/SOC TELEMETRY MONITOR...",
+            "SYSTEM SECURED. WELCOME TO HACKPROOF ACADEMY."
+        ];
+
+        let logIndex = 0;
+        const terminalTextNode = document.getElementById("boot-terminal-text");
+        const progressNode = document.getElementById("boot-progress");
+
+        function typeBootLogs() {
+            if (logIndex < bootTextLogs.length) {
+                const logLine = document.createElement("div");
+                logLine.innerHTML = `> <span class="text-white">${bootTextLogs[logIndex]}</span>`;
+                terminalTextNode.appendChild(logLine);
+                logIndex++;
+                progressNode.style.width = `${(logIndex / bootTextLogs.length) * 100}%`;
+                setTimeout(typeBootLogs, 300);
+            } else {
+                setTimeout(() => {
+                    const preloader = document.getElementById("preloader");
+                    preloader.style.opacity = "0";
+                    setTimeout(() => preloader.style.display = "none", 500);
+                    initTypewriter();
+                }, 500);
+            }
+        }
+        window.addEventListener("load", typeBootLogs);
+
+        // 2. TYPEWRITER EFFECT FOR HERO ROLES
+        const roles = [
+            "Cybersecurity Analyst",
+            "Network Security Engineer",
+            "SOC Analyst",
+            "NOC Engineer",
+            "ISP Security Specialist",
+            "Blue Team Professional",
+            "AI Prompt Engineer"
+        ];
+        let roleIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const typewriterNode = document.getElementById("role-typewriter");
+
+        function initTypewriter() {
+            const currentRole = roles[roleIdx];
+            if (isDeleting) {
+                typewriterNode.innerText = currentRole.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typewriterNode.innerText = currentRole.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            let typeSpeed = isDeleting ? 40 : 80;
+
+            if (!isDeleting && charIdx === currentRole.length) {
+                typeSpeed = 1800;
+                isDeleting = true;
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                roleIdx = (roleIdx + 1) % roles.length;
+                typeSpeed = 400;
+            }
+
+            setTimeout(initTypewriter, typeSpeed);
+        }
+
+        // 3. SCROLL PROGRESS INDICATOR
+        window.addEventListener("scroll", () => {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        });
+
+        // 4. DESKTOP CUSTOM CURSOR
+        const cursor = document.getElementById("custom-cursor");
+        const cursorDot = document.getElementById("custom-cursor-dot");
+
+        document.addEventListener("mousemove", (e) => {
+            if (cursor && cursorDot) {
+                cursor.style.top = `${e.clientY}px`;
+                cursor.style.left = `${e.clientX}px`;
+                cursorDot.style.top = `${e.clientY}px`;
+                cursorDot.style.left = `${e.clientX}px`;
+            }
+        });
+
+        // 5. MOBILE MENU DRAWER TOGGLE
+        const mobileToggleBtn = document.getElementById("mobile-toggle");
+        const mobileMenuNode = document.getElementById("mobile-menu");
+        mobileToggleBtn.addEventListener("click", () => {
+            mobileMenuNode.classList.toggle("hidden");
+        });
+        document.querySelectorAll(".mobile-nav-link").forEach(link => {
+            link.addEventListener("click", () => mobileMenuNode.classList.add("hidden"));
+        });
+
+        // 6. MODALS
+        function openModal(title, text) {
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-body").innerText = text;
+            document.getElementById("info-modal").classList.remove("hidden");
+        }
+        function openNodeModal(nodeName, nodeDetails) {
+            openModal("NETWORK NODE: " + nodeName, nodeDetails);
+        }
+        function closeModal() {
+            document.getElementById("info-modal").classList.add("hidden");
+        }
+
+        // 7. CONTACT FORM SUBMISSION
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById("contact-name").value;
+            alert(`Message Stream Initiated from ${name}. Transmission Received.`);
+            document.getElementById("contact-form").reset();
+        }
+
+        // 8. AOS INITIALIZATION
+        AOS.init({ once: true, duration: 800 });
+    </script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // Right Click Intercept
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                fireCyberSecurityAlert("Right Click Command Intercepted by Defense Policy.");
+                return false;
+            });
+
+            // Prevent Copy / Cut Selection
+            document.addEventListener('copy', function(e) {
+                e.preventDefault();
+                fireCyberSecurityAlert("Content Extraction Disabled.");
+            });
+            document.addEventListener('cut', function(e) { e.preventDefault(); });
+
+            // Keyboard Shortcuts Deterrence
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S' || e.key === 'a' || e.key === 'A' || e.key === 'p' || e.key === 'P')) {
+                    e.preventDefault();
+                    fireCyberSecurityAlert("Keyboard Extraction Shortcut Intercepted.");
+                    return false;
+                }
+            });
+
+            // DevTools Hotkeys Deterrence
+            document.addEventListener('keydown', function(e) {
+                if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67))) {
+                    e.preventDefault();
+                    fireCyberSecurityAlert("Access Denied: Production DevTools Blocked.");
+                    return false;
+                }
+            });
+
+            // Security Alert Popup Modal
+            function fireCyberSecurityAlert(reasonText) {
+                const existingPopup = document.getElementById("cyberSecurityPopupEngineModal");
+                if (existingPopup) existingPopup.remove();
+
+                const popupMarkup = `
+                    <div id="cyberSecurityPopupEngineModal" style="
+                        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+                        background: rgba(4, 7, 16, 0.9); backdrop-filter: blur(14px);
+                        display: flex; align-items: center; justify-content: center;
+                        z-index: 99999999; font-family: sans-serif;">
+                        
+                        <div style="
+                            background: #0d162b; border: 1px solid #f27127; border-radius: 14px;
+                            padding: 35px 25px; text-align: center; max-width: 440px; width: 92%;
+                            box-shadow: 0 0 35px rgba(242, 113, 39, 0.45); color: #ffffff;">
+                            
+                            <div style="font-size: 2.8rem; color: #f27127; margin-bottom: 12px;">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4 style="font-weight: 800; margin-bottom: 5px; letter-spacing: 0.5px; color: #ffffff; text-transform: uppercase;">System Protected</h4>
+                            <p style="color: #00d2ff; font-size: 0.85rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase;">Protected By Md.Rimon Ahamed CyberSecurity Analyst</p>
+                            <hr style="border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 15px;">
+                            <p style="font-size: 0.9rem; color: #a9b7cf; margin-bottom: 22px; line-height: 1.5;">${reasonText}</p>
+                            
+                            <button onclick="document.getElementById('cyberSecurityPopupEngineModal').remove()" style="
+                                background: linear-gradient(135deg, #f27127, #d94f04); border: none; color: #ffffff;
+                                padding: 11px 28px; font-weight: 700; border-radius: 6px; cursor: pointer;
+                                box-shadow: 0 0 15px rgba(242, 113, 39, 0.5); text-transform: uppercase; font-size: 0.82rem;">
+                                Acknowledge Security Protocol
+                            </button>
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', popupMarkup);
+            }
+        })();
+    </script>
+
+<!-- ========================================== -->
+<!-- 1. WHATSAPP & TELEGRAM FLOATING BUTTONS + CHATBOT -->
+<!-- ========================================== -->
+
+<!-- FontAwesome Icons CDN (যদি আপনার প্রজেক্টে যুক্ত করা না থাকে) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Custom Styles for Floating Buttons and Chatbot -->
+<style>
+  /* Floating Utilities Deck */
+  .floating-chat-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 99999;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .chat-btn-node {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .chat-btn-node:hover {
+    transform: scale(1.1);
+  }
+
+  /* Specific Branding Colors */
+  .btn-whatsapp {
+    background-color: #25D366;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+  }
+
+  .btn-telegram {
+    background-color: #0088cc;
+    box-shadow: 0 0 15px rgba(0, 136, 204, 0.4);
+  }
+
+  .btn-chatbot {
+    background: linear-gradient(135deg, #00d2ff, #9b51e0);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+  }
+
+  /* Telegram/AI Chatbot Box Popup */
+  .chatbot-box-window {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 320px;
+    height: 420px;
+    background: #0d162b;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 99999;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    overflow: hidden;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    animation: popUpFade 0.3s ease;
+  }
+
+  @keyframes popUpFade {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .chatbot-header {
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    padding: 14px;
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .chatbot-body {
+    flex-grow: 1;
+    padding: 14px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.85rem;
+    background: #060913;
+  }
+
+  .chat-msg {
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 85%;
+    line-height: 1.4;
+  }
+
+  .bot-msg {
+    background: #1e293b;
+    color: #00d2ff;
+    align-self: flex-start;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+  }
+
+  .user-msg {
+    background: #00d2ff;
+    color: #000000;
+    font-weight: 600;
+    align-self: flex-end;
+  }
+
+  .chatbot-footer {
+    padding: 10px;
+    background: #0d162b;
+    border-top: 1px solid rgba(0, 210, 255, 0.2);
+    display: flex;
+    gap: 6px;
+  }
+
+  .chatbot-input {
+    flex-grow: 1;
+    background: #060913;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    outline: none;
+  }
+
+  .chatbot-send-btn {
+    background: #00d2ff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    padding: 0 14px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+<!-- Floating Buttons UI -->
+<div class="floating-chat-container">
+  <!-- AI / Telegram Chatbot Toggle Button -->
+  <button class="chat-btn-node btn-chatbot" onclick="toggleChatbotPopup()" title="Open Chatbot">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+
+  <!-- Telegram Direct Link Button -->
+  <!-- ⚠️ t.me/YourTelegramUsername এর জায়গায় আপনার নিজের টেলিগ্রাম ইউজারনেম দিন -->
+  <a href="https://telegram.me/CyberHaccker" target="_blank" class="chat-btn-node btn-telegram" title="Contact on Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+
+  <!-- WhatsApp Direct Link Button -->
+  <!-- ⚠️ 8801XXXXXXXXX এর জায়গায় আপনার নিজের হোয়াটসঅ্যাপ নম্বর দিন -->
+  <a href="https://wa.me/8801782642544?text=Hello,%20I%20want%20to%20know%20more%20details!" target="_blank" class="chat-btn-node btn-whatsapp" title="Contact on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<!-- Interactive Chatbot Box Modal -->
+<div id="chatbotBox" class="chatbot-box-window">
+  <div class="chatbot-header">
+    <span><i class="fa-solid fa-robot text-cyan me-2" style="color:#00d2ff;"></i> Security Support Bot</span>
+    <button onclick="toggleChatbotPopup()" style="background:none; border:none; color:#aaa; cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  
+  <div id="chatMessageStream" class="chatbot-body">
+    <div class="chat-msg bot-msg">
+      হ্যালো! 👋 আমি সাইবার সিকিউরিটি ও নেটওয়ার্ক অ্যাসিস্ট্যান্ট বোট। আমি কীভাবে সাহায্য করতে পারি?
+    </div>
+  </div>
+
+  <div class="chatbot-footer">
+    <input type="text" id="chatInput" class="chatbot-input" placeholder="মেসেজ লিখুন..." onkeypress="handleKeyPress(event)">
+    <button class="chatbot-send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- JavaScript Logic Engine -->
+<script>
+  // Chatbot Popup Open/Close Toggle
+  function toggleChatbotPopup() {
+    const box = document.getElementById("chatbotBox");
+    if (box.style.display === "flex") {
+      box.style.display = "none";
+    } else {
+      box.style.display = "flex";
+    }
+  }
+
+  // Send Message Logic
+  function sendMessage() {
+    const input = document.getElementById("chatInput");
+    const message = input.value.trim();
+    
+    if (message === "") return;
+
+    const stream = document.getElementById("chatMessageStream");
+
+    // Add User Message
+    const userDiv = document.createElement("div");
+    userDiv.className = "chat-msg user-msg";
+    userDiv.innerText = message;
+    stream.appendChild(userDiv);
+
+    input.value = "";
+    stream.scrollTop = stream.scrollHeight;
+
+    // Simulate Automated Bot Reply
+    setTimeout(() => {
+      const botDiv = document.createElement("div");
+      botDiv.className = "chat-msg bot-msg";
+      
+      // Auto Auto Reply Sample Logic
+      if (message.toLowerCase().includes("hello") || message.toLowerCase().includes("hi")) {
+        botDiv.innerText = "জি বলুন, আপনার নেটওয়ার্ক বা সিকিউরিটি বিষয়ে কোনো প্রশ্ন আছে?";
+      } else {
+        botDiv.innerText = "ধন্যবাদ মেসেজের জন্য! বিস্তারিত আলোচনার জন্য আমাদের WhatsApp বা Telegram এ সরাসরি কানেক্ট করুন।";
+      }
+
+      stream.appendChild(botDiv);
+      stream.scrollTop = stream.scrollHeight;
+    }, 600);
+  }
+
+  // Enter Key Support
+  function handleKeyPress(event) {
+    if (event.key === "Enter") {
+      sendMessage();
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
